@@ -1,0 +1,94 @@
+Amazon EC2 Pricing Models:
+---------------------------------
+-> With Amazon EC2, you pay only for the compute time that you use. 
+-> Amazon EC2 offers a variety of pricing options for different use cases. 
+
+1. Ondemand instances
+2. Ec2 saving plans
+3. Reserved instances
+4. Spot instnaces
+5. Dedicated hosts
+
+On-Demand-Instances:
+---------------------------
+-> you only pay for the duration that your instance runs for. (hours, minutes, seconds etc..)
+-> This can be per hour or per second, depending on the instance type and operating system you choose to run.
+-> No long-term commitments or upfront payments are needed.
+-> On-Demand Instances include developing and testing applications and running applications that have unpredictable usage patterns.
+
+Pros:
+-> There’s no long-term commitment for using EC2 instances.
+-> AWS only charges for the actual usage hours.
+
+Cons:
+-> Most expensive option.
+-> Not suitable for long-running production instances.
+
+usecases:
+-> Short-term projects or PoCs.
+-> Non-production workloads.
+-> Assessing unpredictable workloads.
+
+EC2-saving-plans:
+--------------------
+-> Savings Plan offers low prices on EC2 usage in exchange for a commitment to a consistent amount of usage measured in dollars per hour for a one or three-year term.
+-> This term commitment results in savings of up to 72% over On-Demand costs.
+
+Pros:
+-> Easy to manage in comparison to Spot and Reserved Instances
+-> Can achieve a discount of up to 72%
+-> Predictable expenses for long-term usage
+
+Cons:
+-> Like Reserved Instances, customers need to make a long term commitment
+-> Excess usage above the hourly cap are charged at an On-Demand rate
+
+Usecases:
+-> Workloads are predictable, continuous and guaranteed to remain under a threshold.
+-> For workloads running on EC2 nodes, Fargate clusters or through Lambda functions.
+
+Reserved Instances:
+----------------------
+-> These are suited for steady-state workloads.
+-> It's offer you up to a 75% discount versus On-Demand pricing.
+-> You can purchase Standard Reserved and Convertible Reserved Instances for a 1-year or 3-year term.
+-> Scheduled Reserved Instances for a 1-year term.
+
+Pros:
+-> There’s up to 70% discount for long term usage commitment.
+-> Predictable pricing.
+-> Customers are able to reserve guaranteed capacity.
+-> Easier to manage compared to Spot Instances.
+
+Cons:
+-> Reduced flexibility: if you don’t have instances to apply the RI, you still have to pay the price.
+-> Requires a long-term commitment.
+
+Usecases:
+-> Production applications with predictable, long-term usage.
+
+Spot Instances:
+---------------
+-> It's allow you to request spare Amazon EC2 computing capacity for up to 90% off of the On-Demand price. 
+-> Spot Instances are ideal for workloads with flexible start and end times.
+-> Unlike Amazon EC2 Savings Plans, Spot Instances do not require contracts or a commitment to a consistent amount of compute usage. 
+
+pros:
+-> Cheapest pricing model with up to 90% off On-Demand pricing.
+-> Suitable for non-production workloads, or workloads that can regenerate data or reprocess from the point of termination.
+
+Cons:
+-> Your instance can be terminated unexpectedly if there is a higher bidder, 
+if On Demand resource is required, or if the instance has restraints that can’t be met. 
+Without proper planning, this can leave your application down.
+
+-> This can be complex to set up if you are just getting started with AWS.
+
+Usecases:
+-> These can be very efficient for applications with high fault tolerance, or transient workloads like CI/CD pipelines.
+
+Dedicated hosts:
+------------------
+-> These are physical hosts dedicated for your use for EC2. 
+-> These are usually for meeting certain compliance requirements and nobody else will share tenancy of that host.
+-> Dedicated Hosts are the most expensive.
