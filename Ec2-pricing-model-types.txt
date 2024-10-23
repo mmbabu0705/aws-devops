@@ -1,3 +1,4 @@
+--------------------------------
 Amazon EC2 Pricing Models:
 ---------------------------------
 -> With Amazon EC2, you pay only for the compute time that you use. 
@@ -47,6 +48,7 @@ Usecases:
 -> Workloads are predictable, continuous and guaranteed to remain under a threshold.
 -> For workloads running on EC2 nodes, Fargate clusters or through Lambda functions.
 
+---------------------
 Reserved Instances:
 ----------------------
 -> These are suited for steady-state workloads.
